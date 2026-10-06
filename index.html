@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boveni – Learn something useful every day</title>
+<style>
+:root{--bg:#faf7f2;--card:#fff;--ink:#1f2a2e;--mut:#5d6b70;--ac:#2f7d6d;--ac2:#e8a64a;--soft:#e6f1ee;--ln:#e5dfd3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14201f;--card:#1c2b2a;--ink:#eef2ee;--mut:#a3b4b0;--ac:#5fc0a8;--ac2:#f0b866;--soft:#233836;--ln:#2f4442}}
+:root[data-theme="dark"]{--bg:#14201f;--card:#1c2b2a;--ink:#eef2ee;--mut:#a3b4b0;--ac:#5fc0a8;--ac2:#f0b866;--soft:#233836;--ln:#2f4442}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 Georgia,'Times New Roman',serif}
+h1,h2,h3,.sans,nav,button{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.w{max-width:1000px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--ln)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;flex-wrap:wrap;gap:10px}
+.logo{font-weight:800;font-size:24px;letter-spacing:-.5px;color:var(--ac);display:flex;align-items:center;gap:8px}
+nav a{color:var(--mut);text-decoration:none;margin-left:18px;font-size:15px}
+nav a:hover{color:var(--ac)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:56px 0}
+.eyebrow{font:600 13px system-ui;letter-spacing:.12em;text-transform:uppercase;color:var(--ac)}
+h1{font-size:clamp(34px,6vw,54px);line-height:1.1;margin:10px 0 16px;letter-spacing:-1px}
+.lead{color:var(--mut);font-size:19px}
+.btn{display:inline-block;margin-top:14px;padding:12px 22px;background:var(--ac);color:#fff;border-radius:10px;text-decoration:none;font:600 15px system-ui;border:0;cursor:pointer}
+.btn.o{background:transparent;color:var(--ac);border:1.5px solid var(--ac);margin-left:8px}
+section{padding:46px 0;border-top:1px solid var(--ln)}
+h2{font-size:clamp(26px,4vw,34px);margin:0 0 8px;letter-spacing:-.5px}
+.sub{color:var(--mut);margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:18px}
+.card h3{margin:10px 0 6px;font-size:18px}
+.card p{margin:0;color:var(--mut);font-size:15.5px;line-height:1.6}
+.tag{font:600 12px system-ui;color:var(--ac);background:var(--soft);padding:3px 10px;border-radius:99px;display:inline-block}
+.ill{width:100%;height:120px;border-radius:10px;background:var(--soft);display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;padding:10px 0 10px 50px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:10px;width:34px;height:34px;border-radius:50%;background:var(--ac);color:#fff;font:700 15px/34px system-ui;text-align:center}
+.pill{padding:9px 16px;border:1.5px solid var(--ln);background:var(--card);color:var(--ink);border-radius:99px;cursor:pointer;font-size:15px;margin:0 8px 8px 0}
+.pill.on{border-color:var(--ac);background:var(--soft);color:var(--ac);font-weight:600}
+#res{background:var(--soft);border-radius:12px;padding:16px;margin-top:10px}
+details{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font:600 16px system-ui}
+details p{margin:8px 0 0;color:var(--mut)}
+.quote{border-left:4px solid var(--ac2);padding:6px 18px;font-style:italic;font-size:19px;margin:20px 0}
+footer{border-top:1px solid var(--ln);padding:30px 0;color:var(--mut);font-size:14px;text-align:center}
+@media(max-width:720px){.hero,.two{grid-template-columns:1fr}.hero{padding:34px 0}nav a{margin:0 14px 0 0}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="book" viewBox="0 0 120 120"><path d="M60 34c-12-8-30-9-44-4v54c14-5 32-4 44 4z" fill="#2f7d6d"/><path d="M60 34c12-8 30-9 44-4v54c-14-5-32-4-44 4z" fill="#5fc0a8"/><path d="M60 34v54" stroke="#fff" stroke-width="3"/><circle cx="60" cy="20" r="8" fill="#e8a64a"/></symbol>
+<symbol id="bulb" viewBox="0 0 120 120"><circle cx="60" cy="48" r="26" fill="#e8a64a"/><rect x="48" y="74" width="24" height="14" rx="4" fill="#5d6b70"/><rect x="52" y="90" width="16" height="6" rx="3" fill="#5d6b70"/><path d="M60 38v20M52 46l8 8 8-8" stroke="#fff" stroke-width="3" fill="none"/></symbol>
+<symbol id="lens" viewBox="0 0 120 120"><circle cx="52" cy="52" r="26" fill="none" stroke="#2f7d6d" stroke-width="8"/><path d="M72 72l28 28" stroke="#2f7d6d" stroke-width="10" stroke-linecap="round"/><circle cx="52" cy="52" r="14" fill="#5fc0a8" opacity=".5"/></symbol>
+<symbol id="leaf" viewBox="0 0 120 120"><path d="M30 90C20 50 50 20 96 24c4 46-26 76-62 68z" fill="#5fc0a8"/><path d="M34 88C50 66 68 48 88 34" stroke="#2f7d6d" stroke-width="4" fill="none"/></symbol>
+<symbol id="shield" viewBox="0 0 120 120"><path d="M60 16l36 14v28c0 24-16 40-36 48-20-8-36-24-36-48V30z" fill="#2f7d6d"/><path d="M42 60l14 14 24-28" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="map" viewBox="0 0 120 120"><path d="M16 30l28-10 32 10 28-10v70l-28 10-32-10-28 10z" fill="#5fc0a8"/><path d="M44 20v70M76 30v70" stroke="#fff" stroke-width="3"/><circle cx="60" cy="52" r="8" fill="#e8a64a"/></symbol>
+<symbol id="pen" viewBox="0 0 120 120"><path d="M24 96l6-24 52-52 18 18-52 52z" fill="#e8a64a"/><path d="M30 72l18 18" stroke="#fff" stroke-width="3"/><path d="M24 96l4-14 10 10z" fill="#2f7d6d"/></symbol>
+<symbol id="cup" viewBox="0 0 120 120"><path d="M26 44h56v26a28 28 0 0 1-56 0z" fill="#2f7d6d"/><path d="M82 50h10a10 10 0 0 1 0 22H80" stroke="#2f7d6d" stroke-width="6" fill="none"/><path d="M42 30c-4-8 4-10 0-18M58 30c-4-8 4-10 0-18" stroke="#e8a64a" stroke-width="4" fill="none" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<header><div class="w"><nav>
+<div class="logo"><svg width="30" height="30"><use href="#leaf"/></svg>Boveni</div>
+<div><a href="#new">Latest</a><a href="#find">Topics</a><a href="#start">Start</a><a href="#match">Match</a><a href="#faq">FAQ</a></div>
+</nav></div></header>
+
+<main class="w">
+<div class="hero">
+<div>
+<div class="eyebrow">A calm place to learn</div>
+<h1>Discover More Today</h1>
+<p class="lead">Boveni is a reading space for curious people. Short, clear articles that explain how everyday things work, so you can understand more and decide with confidence.</p>
+<a class="btn" href="#new">Start reading</a><a class="btn o" href="#start">How it works</a>
+</div>
+<svg viewBox="0 0 300 260" style="width:100%;height:auto" role="img" aria-label="Illustration of an open book with ideas rising from it">
+<rect width="300" height="260" rx="22" fill="var(--soft)"/>
+<circle cx="230" cy="52" r="26" fill="#e8a64a" opacity=".85"/>
+<g transform="translate(60 78) scale(1.9)"><use href="#book" width="120" height="120"/></g>
+<g transform="translate(176 120) scale(.7)"><use href="#bulb" width="120" height="120"/></g>
+<g transform="translate(20 20) scale(.6)"><use href="#leaf" width="120" height="120"/></g>
+<path d="M30 232h240" stroke="var(--ln)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+</div>
+
+<section id="new">
+<h2>Explore Our Latest Offers</h2>
+<p class="sub">Our newest free reads: fresh explainers, added every week.</p>
+<div class="grid">
+<div class="card"><svg class="ill"><use href="#lens" x="50%" y="0" width="120" height="120" transform="translate(-60 0)"/></svg><span class="tag">Research</span><h3>How to Check if a Website Is Reliable</h3><p>Four quick checks: author, date, sources and purpose, that take under two minutes.</p></div>
+<div class="card"><svg class="ill"><use href="#cup" x="50%" y="0" width="120" height="120" transform="translate(-60 0)"/></svg><span class="tag">Habits</span><h3>The 20-Minute Morning Reading Habit</h3><p>Why small daily sessions beat weekend marathons when you want to remember what you read.</p></div>
+<div class="card"><svg class="ill"><use href="#pen" x="50%" y="0" width="120" height="120" transform="translate(-60 0)"/></svg><span class="tag">Writing</span><h3>Taking Notes You Will Actually Use</h3><p>A simple three-column method for turning reading into understanding.</p></div>
+</div>
+</section>
+
+<section id="find">
+<h2>Find What You Need</h2>
+<p class="sub">Pick a topic and jump straight to the guides written for it.</p>
+<div class="grid">
+<div class="card"><svg width="54" height="54"><use href="#lens"/></svg><h3>Research Skills</h3><p>Searching smarter, comparing sources, spotting weak claims.</p></div>
+<div class="card"><svg width="54" height="54"><use href="#bulb"/></svg><h3>Thinking & Decisions</h3><p>Clear ways to weigh choices without feeling overwhelmed.</p></div>
+<div class="card"><svg width="54" height="54"><use href="#leaf"/></svg><h3>Everyday Science</h3><p>Plain-language explanations of the world around you.</p></div>
+<div class="card"><svg width="54" height="54"><use href="#pen"/></svg><h3>Study & Writing</h3><p>Methods for learning faster and explaining ideas well.</p></div>
+</div>
+</section>
+
+<section id="trust" class="two">
+<div>
+<h2>Quality You Can Trust</h2>
+<p>Every Boveni article follows the same standard. We explain one idea at a time, link the sources we used, and update a piece when something changes. No hype, no pressure, just information you can check for yourself.</p>
+<p class="quote">Good information should leave you more capable, not more confused.</p>
+</div>
+<svg viewBox="0 0 200 200" style="width:100%;max-width:260px;margin:auto;display:block"><circle cx="100" cy="100" r="92" fill="var(--soft)"/><g transform="translate(40 40) scale(1.0)"><use href="#shield" width="120" height="120"/></g></svg>
+</section>
+
+<section id="options">
+<h2>Explore Your Options</h2>
+<p class="sub">An article preview: how to compare anything fairly.</p>
+<div class="card" style="font-size:16.5px">
+<h3 style="margin-top:0">Three Questions Before You Compare</h3>
+<p style="color:var(--ink)">When several choices look similar, it helps to slow down. First, ask <b>what problem you are trying to solve</b>. Second, list the <b>two or three things that truly matter</b> to you. Third, look for <b>evidence</b> instead of impressions: tests, reviews from people in your situation, and plain facts.</p>
+<p style="color:var(--ink);margin-top:10px">Writing your criteria down before you start keeps you from being pulled around by whichever option is described most loudly.</p>
+</div>
+</section>
+
+<section id="start">
+<h2>Get Started Today</h2>
+<p class="sub">New here? Follow this simple path.</p>
+<div class="two">
+<ol class="steps">
+<li><b>Choose a topic</b> that you are curious about right now.</li>
+<li><b>Read one short guide</b>. Most take five to eight minutes.</li>
+<li><b>Write down one idea</b> in your own words.</li>
+<li><b>Try it in real life</b> within a day to make it stick.</li>
+</ol>
+<svg viewBox="0 0 260 180" style="width:100%"><rect width="260" height="180" rx="18" fill="var(--soft)"/><g transform="translate(70 30) scale(1.1)"><use href="#map" width="120" height="120"/></g></svg>
+</div>
+</section>
+
+<section id="discover">
+<h2>Discover Something New</h2>
+<p class="sub">Did you know?</p>
+<div class="grid">
+<div class="card"><h3>Reading aloud helps memory</h3><p>Hearing and seeing words together gives your brain two routes to remember them. This is called the production effect.</p></div>
+<div class="card"><h3>Breaks improve focus</h3><p>Short pauses during study let your mind consolidate what it just learned, so the next session starts stronger.</p></div>
+<div class="card"><h3>Teaching is learning</h3><p>Explaining an idea to someone else quickly shows you which parts you have not fully understood yet.</p></div>
+</div>
+</section>
+
+<section id="solution">
+<h2>Find the Right Solution</h2>
+<p class="sub">Common learning problems and the idea that helps.</p>
+<details open><summary>"I forget what I read."</summary><p>Pause after each section and summarise it in one sentence. Review those sentences the next day.</p></details>
+<details><summary>"I do not know where to begin."</summary><p>Start with the question, not the topic. A clear question tells you what to look for and what to ignore.</p></details>
+<details><summary>"There is too much information."</summary><p>Limit yourself to three good sources. Depth from a few trusted places beats shallow skimming of many.</p></details>
+</section>
+
+<section id="collection">
+<h2>Browse Our Collection</h2>
+<p class="sub">Guides grouped by how much time you have.</p>
+<div class="grid">
+<div class="card"><span class="tag">5 min</span><h3>Quick Reads</h3><p>One idea, one example, one takeaway.</p></div>
+<div class="card"><span class="tag">15 min</span><h3>Deep Dives</h3><p>Longer explainers with diagrams and worked examples.</p></div>
+<div class="card"><span class="tag">Printable</span><h3>Checklists</h3><p>One-page summaries you can keep beside you.</p></div>
+<div class="card"><span class="tag">Series</span><h3>Learning Paths</h3><p>Connected guides that build step by step.</p></div>
+</div>
+</section>
+
+<section id="simple" class="two">
+<svg viewBox="0 0 240 180" style="width:100%"><rect width="240" height="180" rx="18" fill="var(--soft)"/><g transform="translate(60 25) scale(1.1)"><use href="#cup" width="120" height="120"/></g></svg>
+<div>
+<h2>Simple & Convenient</h2>
+<p>No sign-up wall and no clutter. Boveni pages are light, readable on a phone, and easy to bookmark. Pick a guide, read it with a cup of tea, and carry on with your day.</p>
+</div>
+</section>
+
+<section id="popular">
+<h2>Explore Popular Choices</h2>
+<p class="sub">What our readers open the most.</p>
+<div class="grid">
+<div class="card"><h3>1. How to Spot Misleading Statistics</h3><p>Five common tricks and how to see through them.</p></div>
+<div class="card"><h3>2. Building a Reading Routine</h3><p>Fit books and articles into a busy schedule.</p></div>
+<div class="card"><h3>3. Asking Better Questions</h3><p>The skill behind every good search.</p></div>
+</div>
+</section>
+
+<section id="match">
+<h2>Find Your Perfect Match</h2>
+<p class="sub">How do you like to learn? Tap one to see a suggestion.</p>
+<div id="pills">
+<button class="pill" data-k="a">I like short summaries</button>
+<button class="pill" data-k="b">I like detailed explanations</button>
+<button class="pill" data-k="c">I like pictures and diagrams</button>
+<button class="pill" data-k="d">I like step-by-step lists</button>
+</div>
+<div id="res">Choose a style above to get a reading suggestion.</div>
+</section>
+
+<section id="online">
+<h2>Learn More Online</h2>
+<p class="sub">Good habits for learning on the web.</p>
+<div class="grid">
+<div class="card"><h3>Use more than one source</h3><p>If two or three trusted places agree, you can be more confident.</p></div>
+<div class="card"><h3>Check the date</h3><p>Some facts change. Look for the most recent update.</p></div>
+<div class="card"><h3>Keep a learning log</h3><p>A simple note of what you learned each week shows real progress.</p></div>
+</div>
+</section>
+
+<section id="faq">
+<h2>Your Search Ends Here</h2>
+<p class="sub">Answers to common questions about Boveni.</p>
+<details><summary>What is Boveni?</summary><p>A learning and information site with easy-to-read articles on research, thinking, science and study skills.</p></details>
+<details><summary>Is it free to read?</summary><p>Yes. Articles are written to inform, and you can read them without an account.</p></details>
+<details><summary>How often is new content added?</summary><p>We publish new guides every week and review older ones regularly.</p></details>
+<p style="text-align:center;margin-top:30px"><a class="btn" href="#new">Back to the latest reads</a></p>
+</section>
+</main>
+
+<footer><div class="w">© 2026 Boveni · Learn something useful every day</div></footer>
+<script>
+const t={a:"Try our 5-minute Quick Reads: one idea, one takeaway, no fluff.",b:"Go for the Deep Dives. They explain the why behind each idea with worked examples.",c:"Start with the illustrated guides, where diagrams do most of the explaining.",d:"Follow a Learning Path. Each step builds on the last, with a checklist at the end."};
+document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.getElementById('res').textContent=t[b.dataset.k]});
+</script>
+</body></html>
